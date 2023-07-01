@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+</head>
+{% block body_block %}
+    <h1>Register the Details Here!</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ register_form|crispy }}
+        <br><input type="submit" value="Register">
+    </form>
+{% endblock %}
+</html>
